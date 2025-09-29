@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Switch Example</title>
+  </head>
+  <body>
+    <div style="font-size: 30px; margin-top: 20px; display: flex; gap: 10px">
+      <p>Today Is</p>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      // Switch Example
+      let day = 3;
+
+      switch (day) {
+        case 1:
+          document.getElementById("result").innerText = "Sunday";
+          break;
+        case 2:
+          document.getElementById("result").innerText = "Monday";
+          break;
+        case 3:
+          document.getElementById("result").innerText = "Tuesday";
+          break;
+        case 4:
+          document.getElementById("result").innerText = "Wednesday";
+          break;
+        case 5:
+          document.getElementById("result").innerText = "Thursday";
+          break;
+        case 6:
+          document.getElementById("result").innerText = "Friday";
+          break;
+        case 7:
+          document.getElementById("result").innerText = "Saturday";
+          break;
+        default:
+          document.getElementById("result").innerText = "Invalid Day";
+          break;
+      }
+    </script>
+  </body>
+</html>

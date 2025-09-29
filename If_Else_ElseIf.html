@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS If Else ElseIf Example</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 50px">
+      <input
+        type="number"
+        id="ageInput"
+        placeholder="Enter your age"
+        style="font-size: 20px; padding: 5px"
+      />
+      <button
+        onclick="checkAge()"
+        style="font-size: 20px; padding: 5px 15px; margin-left: 10px"
+      >
+        Check
+      </button>
+
+      <p id="result" style="font-size: 30px; margin-top: 20px"></p>
+      <p id="logicalResult" style="font-size: 25px; margin-top: 10px"></p>
+    </div>
+
+    <script>
+      function checkAge() {
+        let age = Number(document.getElementById("ageInput").value);
+        let message = "";
+
+        // Age categories
+        if (age >= 65) {
+          message = "You are a Senior";
+        } else if (age >= 45) {
+          message = "You are Middle Aged";
+        } else if (age >= 25) {
+          message = "You are a Young Adult";
+        } else if (age >= 18) {
+          message = "You are an Adult";
+        } else if (age >= 13) {
+          message = "You are a Teenager";
+        } else if (age >= 5) {
+          message = "You are a Child";
+        } else {
+          message = "You are a Baby";
+        }
+
+        document.getElementById("result").innerText = message;
+
+        // ---------- Logical Operators Example ----------
+
+        let logicalMsg = "";
+
+        // AND example: age between 13 and 19 inclusive → teenager
+        if (age >= 13 && age <= 19) {
+          logicalMsg += "AND check: You are a Teenager! ✅\n";
+        } else {
+          logicalMsg += "AND check: Not a Teenager ❌\n";
+        }
+
+        // OR example: age < 5 OR age >= 65 → baby or senior
+        if (age < 5 || age >= 65) {
+          logicalMsg += "OR check: You are either a Baby or a Senior! ✅";
+        } else {
+          logicalMsg += "OR check: Not a Baby or Senior ❌";
+        }
+
+        document.getElementById("logicalResult").innerText = logicalMsg;
+      }
+    </script>
+  </body>
+</html>
