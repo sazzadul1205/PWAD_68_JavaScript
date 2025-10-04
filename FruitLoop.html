@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Loop</title>
+  </head>
+  <body>
+    <script>
+      let fruits = [
+        "Banana",
+        "Orange",
+        "Apple",
+        "Mango",
+        "Watermelon",
+        "Kiwi",
+        "Lemon",
+        "Grape",
+        "Pineapple",
+        "Strawberry",
+      ];
+      for (let i = 0; i < fruits.length; i++) {
+        document.write(fruits[i] + "<br />");
+      }
+    </script>
+
+    <hr />
+
+    <script>
+      let output = "<ol>";
+      for (let i = 0; i < fruits.length; i++) {
+        output += "<li>" + fruits[i] + "</li>";
+      }
+      output += "</ol>";
+      document.write(output);
+    </script>
+
+    <hr />
+
+    <script>
+      let output2 = "<ul>";
+      for (let i = 0; i < fruits.length; i++) {
+        output2 += "<li>" + fruits[i] + "</li>";
+      }
+      output2 += "</ul>";
+      document.write(output2);
+    </script>
+  </body>
+</html>

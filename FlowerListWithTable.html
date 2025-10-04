@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower List With Table</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <script>
+      let flowers = ["Rose", "Lily", "Tulip", "Jasmine", "Sunflower"];
+      let Quantity = [10, 22, 33, 40, 15];
+      let index = 1;
+      let table = "<table><tr> <th>Index</th> <th>Flower Name</th></tr>";
+      for (let i = 0; i < flowers.length; i++) {
+        table +=
+          "<tr> <td>" +
+          index++ +
+          "</td> <td>" +
+          flowers[i] +
+          "</td> <td>" +
+          Quantity[i] +
+          "</td> </tr>";
+      }
+      table += "</table>";
+      document.write(table);
+    </script>
+  </body>
+</html>
