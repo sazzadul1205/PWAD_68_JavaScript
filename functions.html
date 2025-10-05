@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome with Prompt</title>
+  </head>
+  <body style="text-align: center; padding: 30px">
+    <button onclick="welcome()">Run Please</button>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <label for="num1">Enter a number:</label>
+    <input type="number" id="num1" placeholder="First number" />
+
+    <label for="num2">Enter another number:</label>
+    <input type="number" id="num2" placeholder="Second number" />
+
+    <br /><br />
+    <button onclick="showSum()">Show Sum</button>
+
+    <script>
+      function welcome() {
+        const name = prompt("Enter Your Name:");
+
+        if (!name || name.trim() === "") {
+          alert("Please enter your name!");
+        } else {
+          alert("Welcome " + name + " to JavaScript!");
+        }
+      }
+
+      function SUM(a, b) {
+        return a + b;
+      }
+
+      function showSum() {
+        const a = Number(document.getElementById("num1").value);
+        const b = Number(document.getElementById("num2").value);
+
+        alert("The sum is: " + SUM(a, b));
+      }
+    </script>
+  </body>
+</html>

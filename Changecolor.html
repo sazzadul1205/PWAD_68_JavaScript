@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Color Flip-Flop</title>
+  </head>
+  <body style="text-align: center; padding: 50px; transition: all 0.5s ease">
+    <h1>Click to Change Background Color</h1>
+    <input
+      type="button"
+      value="Change Color"
+      onclick="changeColor()"
+      style="padding: 10px 20px; font-size: 16px; cursor: pointer"
+    />
+
+    <script>
+      const colors = [
+        "red",
+        "blue",
+        "green",
+        "purple",
+        "orange",
+        "teal",
+        "brown",
+        "pink",
+        "gray",
+        "gold",
+      ];
+
+      let currentIndex = 0;
+
+      function changeColor() {
+        // Change background and text color
+        document.body.style.backgroundColor = colors[currentIndex];
+        document.body.style.color = "white";
+
+        // Move to next color (loop back after last)
+        currentIndex = (currentIndex + 1) % colors.length;
+      }
+
+      /* */
+    </script>
+  </body>
+</html>
