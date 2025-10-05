@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>calculator</title>
+
+    <style>
+      #result1 {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+      #result2 {
+        color: green;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <h1>Sum Function</h1>
@@ -25,7 +42,7 @@
         // return a + b;
         z = a + b;
 
-        document.getElementById("result1").innerHTML = "Total Is" + z;
+        document.getElementById("result1").innerHTML = "Total Is :" + z;
       }
       function Multiply(a, b) {
         a = parseInt(prompt("Enter the First number:"));
@@ -33,7 +50,7 @@
         // return a + b;
         z = a + b;
 
-        document.getElementById("result2").innerHTML = "Total Is" + z;
+        document.getElementById("result2").innerHTML = "Total Is :" + z;
       }
     </script>
   </body>
