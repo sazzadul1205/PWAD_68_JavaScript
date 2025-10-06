@@ -1,0 +1,35 @@
+.navbar {
+  margin-bottom: 0px;
+  background-color: gray;
+  color: black;
+}
+
+/* Navbar text color */
+.navbar-default .nav > li > a.navText {
+  color: #000; /* default text color */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.navbar-default .nav > li > a.navText:hover {
+  color: #1abc9c; /* text color on hover */
+  background-color: #f0f0f0; /* optional background */
+}
+
+/* Active link highlight (optional) */
+.navbar-default .nav > li.active > a.navText {
+  color: #1abc9c;
+  background-color: #f0f0f0;
+}
+
+/* Vertically center brand logo */
+.navbar-brand img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Adjust navbar toggle button spacing on mobile */
+.navbar-toggle {
+  margin-top: 8px;
+}

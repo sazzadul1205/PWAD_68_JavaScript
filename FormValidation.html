@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Basic Form</title>
+    <style>
+      /* Import Google Font */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+      /* Global Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #74b9ff, #a29bfe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Form Container */
+      .form-container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        width: 370px;
+        transition: transform 0.3s ease;
+      }
+
+      .form-container:hover {
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        text-align: center;
+        color: #2d3436;
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        color: #2d3436;
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #dfe6e9;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #0984e3;
+        box-shadow: 0 0 5px rgba(9, 132, 227, 0.3);
+      }
+
+      textarea {
+        resize: none;
+        height: 80px;
+      }
+
+      /* Gender Section */
+      .gender-group {
+        margin-top: 15px;
+      }
+
+      .gender-options {
+        display: flex;
+        gap: 15px;
+        margin-top: 6px;
+      }
+
+      .gender-options label {
+        font-weight: 400;
+        color: #2d3436;
+        cursor: pointer;
+      }
+
+      input[type="radio"] {
+        accent-color: #0984e3;
+        margin-right: 6px;
+      }
+
+      /* Skills Section */
+      .skills-group {
+        margin-top: 15px;
+      }
+
+      .skills-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+      }
+
+      .skills-list input[type="checkbox"] {
+        width: auto;
+        margin-right: 6px;
+        accent-color: #0984e3;
+      }
+
+      .skills-list label {
+        font-weight: 400;
+        color: #2d3436;
+        cursor: pointer;
+      }
+
+      /* Submit Button */
+      .btn-submit {
+        width: 100%;
+        background: #0984e3;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .btn-submit:hover {
+        background: #74b9ff;
+        transform: translateY(-2px);
+      }
+
+      /* Output Box */
+      #output {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #2d3436;
+        background: #f1f2f6;
+        padding: 10px;
+        border-radius: 8px;
+        border-left: 5px solid #0984e3;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h3>A Basic Form</h3>
+
+      <form name="BasicForm" onsubmit="return FormHandler(event)">
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="fname" required />
+
+        <!-- Gender -->
+        <div class="gender-group">
+          <label for="gender">Gender:</label>
+          <div class="gender-options">
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="Male"
+                required
+              />Male</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="Female"
+                required
+              />Female</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="Other"
+                required
+              />Other</label
+            >
+          </div>
+        </div>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="Address" required></textarea>
+
+        <!-- Phone -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <!-- Skills -->
+        <div class="skills-group">
+          <label>Skills:</label>
+          <div class="skills-list">
+            <label
+              ><input type="checkbox" name="skills" value="HTML" />HTML</label
+            >
+            <label
+              ><input type="checkbox" name="skills" value="CSS" />CSS</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="skills"
+                value="JavaScript"
+              />JavaScript</label
+            >
+            <label
+              ><input type="checkbox" name="skills" value="PHP" />PHP</label
+            >
+            <label
+              ><input type="checkbox" name="skills" value="MySQL" />MySQL</label
+            >
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <input type="submit" class="btn-submit" value="Submit" />
+      </form>
+
+      <!-- Output -->
+      <div id="output"></div>
+    </div>
+
+    <script>
+      function FormHandler(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.BasicForm.fname.value.trim();
+        const gender =
+          document.querySelector('input[name="gender"]:checked')?.value ||
+          "Not specified";
+        const email = document.BasicForm.email.value.trim();
+        const address = document.BasicForm.Address.value.trim();
+        const phone = document.BasicForm.phone.value.trim();
+
+        // Get selected skills
+        const skills = Array.from(
+          document.querySelectorAll('input[name="skills"]:checked')
+        ).map((el) => el.value);
+
+        // Validation
+        if (name === "" || email === "" || address === "" || phone === "") {
+          alert("Please fill in all fields!");
+          return false;
+        }
+
+        // Display output in page
+        const output = document.getElementById("output");
+        output.innerHTML = `
+          <strong>Name:</strong> ${name}<br />
+          <strong>Gender:</strong> ${gender}<br />
+          <strong>Email:</strong> ${email}<br />
+          <strong>Address:</strong> ${address}<br />
+          <strong>Phone:</strong> ${phone}<br />
+          <strong>Skills:</strong> ${skills.length ? skills.join(", ") : "None"}
+        `;
+
+        // Display alert
+        alert(
+          `Name: ${name}\nGender: ${gender}\nEmail: ${email}\nAddress: ${address}\nPhone: ${phone}\nSkills: ${
+            skills.length ? skills.join(", ") : "None"
+          }`
+        );
+
+        // Optional: Reset form after submission
+        document.BasicForm.reset();
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
